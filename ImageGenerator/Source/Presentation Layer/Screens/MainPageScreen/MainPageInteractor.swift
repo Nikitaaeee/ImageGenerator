@@ -53,8 +53,8 @@ extension MainPageInteractor: MainPageBussinesLogic {
             switch result {
             case .success():
                 self.presenter.presentAddedToFavorites()
-            case .failure(_):
-                print("Error")
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
